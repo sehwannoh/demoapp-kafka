@@ -17,7 +17,7 @@ public class InventorySender {
     @Autowired
     private KafkaTemplate<String, InventoryDTO> kafkaTemplate;
 
-    @Value("${kafka.topic.iims.icc.inventory}")
+    @Value("${kafka.topic.ims.icc.inventory}")
     private String kafkaTopic;
 
     public void send(final InventoryDTO inventoryDTO) {

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class InventoryReceiver {
 
-    @KafkaListener(topics = "${kafka.topic.iims.icc.inventory}")
+    @KafkaListener(topics = "${kafka.topic.ims.icc.inventory}")
     public void receive(InventoryDTO inventoryDTO) {
         log.info("Received: {}", inventoryDTO);
     }
